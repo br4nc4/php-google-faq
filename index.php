@@ -25,7 +25,7 @@ $db = [
         "titolo" => "Perché il mio account è associato a un paese?",
         "paragrafo" => [
             "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:",
-            "<ol><li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:</li><li class='list-unstyled'><ul><li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li><li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li></ul></li><li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li></ol>",
+            "<ol><li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:<ol style='list-style-type: lower-alpha;'><li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li><li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li></ol></li><li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li></ol>",
             "Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.",
             "Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell'ultimo anno.",
             "I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l'associazione del paese.",
@@ -61,10 +61,21 @@ $db = [
     <title>google-faq</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+    <style>
+        .container{
+            max-width: 964px;
+        }
+        p{
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+        ol{
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header class="pb-5">
         <div class="d-flex justify-content-between pt-3">
             <div class="ps-3">
                 <img style="vertical-align: bottom;" src="img/logoGoogle.png" alt="">
@@ -77,7 +88,7 @@ $db = [
             </div>
         </div>
 
-        <nav class="ps-3 pt-2">
+        <nav class="ps-3 pt-3">
             <div class="d-flex gap-4">
                 <span>
                     <a class="text-secondary text-decoration-none" href="#">Introduzione</a>
@@ -96,15 +107,14 @@ $db = [
                 </span>
             </div>
         </nav>
+        <hr>
     </header>
-
-    <hr>
     
-    <main>
+    <main class="mt-5">
         <div class="container">
             <?php 
             foreach ($db as $i => $section) {
-                echo "<h4>" . $section["titolo"] . "</h4>";
+                echo "<h4 class='mb-4'>" . $section["titolo"] . "</h4>";
                 foreach($section["paragrafo"] as $risposta) {
                     echo "<p>" . $risposta . "</p>";
                 }
