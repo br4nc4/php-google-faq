@@ -55,16 +55,52 @@ $db = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>google-faq</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 </head>
 <body>
     <header>
+        <div class="d-flex justify-content-between pt-3">
+            <div class="ps-3">
+                <img style="vertical-align: bottom;" src="img/logoGoogle.png" alt="">
 
+                <span class="text-secondary fs-5">Privacy e termini</span>
+            </div>
+
+            <div>
+
+            </div>
+        </div>
+
+        <nav class="ps-3 pt-2">
+            <div class="d-flex gap-4">
+                <span>
+                    <a class="text-secondary text-decoration-none" href="#">Introduzione</a>
+                </span>
+                <span>
+                    <a class="text-secondary text-decoration-none" href="#">Norme sulla privacy</a>
+                </span>
+                <span>
+                    <a class="text-secondary text-decoration-none" href="#">Termini di servizio</a>
+                </span>
+                <span>
+                    <a class="text-secondary text-decoration-none" href="#">Tecnologie</a>
+                </span>
+                <span>
+                    <a class="text-secondary text-decoration-none" href="#">Domande Frequenti</a>
+                </span>
+            </div>
+        </nav>
     </header>
 
+    <hr>
+    
     <main>
+        <div class="container">
 
+        </div>
     </main>
 </body>
 </html>
